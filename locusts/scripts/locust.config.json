@@ -1,0 +1,4 @@
+{
+  "target": "https://about.me/nicejade",
+  "locusts": ["WebsiteLocust"]
+}
