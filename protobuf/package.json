@@ -1,0 +1,17 @@
+{
+  "name": "protobuf-with-docker",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "docker-compose up",
+    "start-verbose": "docker-compose --verbose up",
+    "client": "node ./scripts/client.js",
+    "server": "pm2 start ./scripts/server.js --name 'protobuf-server'",
+    "stop": "pm2 stop 'protobuf-server'",
+    "delete": "pm2 delete 'protobuf-server'"
+  },
+  "dependencies": {
+    "pm2": "^2.10.4",
+    "protobufjs": "^6.8.6",
+    "websocket": "^1.0.26"
+  }
+}

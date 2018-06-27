@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package awesomepackage;
+
+message AwesomeMessage {
+  string type = 1;
+  string field = 2;
+  UserInfo user_info = 3;
+  message UserInfo {
+    int32 id = 1;
+    string nickname = 2;
+    string type = 3;
+    int32 locked = 4;
+  };
+}

@@ -1,0 +1,27 @@
+version: "2"
+services:
+  server:
+    build: .
+    image: "node:carbon"
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - END_ENV=server
+    volumes:
+      - ./:/home/node/app
+    ports:
+      - "3333:3333"
+    tty: true
+  # client:
+  #   image: "node:8"
+  #   user: "node"
+  #   build: .
+  #   working_dir: /home/node/app
+  #   environment:
+  #     - NODE_ENV=client
+  #   volumes:
+  #     - ./:/home/node/app
+  #   ports:
+  #     - 6666:6666
+  #   depends_on:
+  #     - server
