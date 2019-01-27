@@ -1,0 +1,29 @@
+{
+  "url": "https://your-domain-name/",
+  "server": {
+    "host": "0.0.0.0",
+    "port": 2368
+  },
+  "paths": {
+    "contentPath": "/var/lib/ghost/content"
+  },
+  "database": {
+    "client": "sqlite3",
+    "connection": {
+      "filename": "content/data/ghost.db"
+    },
+    "useNullAsDefault": true,
+    "debug": false
+  },
+  "mail": {
+    "transport": "SMTP",
+    "options": {
+      "host": "smtp_host",
+      "port": 25,
+      "auth": {
+        "user": "your_email",
+        "pass": "your_email_pass"
+      }
+    }
+  }
+}

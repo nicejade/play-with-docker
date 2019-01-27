@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  ghost:
+    image: ghost:2.9.1
+    container_name: ghost
+    hostname: ghost
+    volumes:
+      - ./content:/var/lib/ghost/content
+      - ./config.production.json:/var/lib/ghost/config.production.json:z #overwrite default settings 
+    working_dir: /var/lib/ghost
+    restart: always
+    ports:
+      - "2368:2368"
+    environment:
+      - NODE_ENV:production
+
+volumes:
+  ghost:
