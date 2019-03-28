@@ -14,8 +14,11 @@ docker pull python:3.6 // 指定版本 3.6
 
 ### 运行方式
 
-```
+```bash
 cd locusts && docker-compose up
+
+## 持久化部署
+docker-compose up -d
 ```
 
 浏览器打开地址：http://localhost:8089/
